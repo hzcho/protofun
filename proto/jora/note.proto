@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option go_package = "hzcho.note.v1;notev1";
+
+service Note {
+  rpc AddNote (AddNoteRequest) returns (AddNoteResponse);
+  rpc GetNotes (GetNotesRequest) returns (GetNotesResponse);
+  rpc DeleteNote (DeleteNoteRequest) returns (DeleteNoteResponse);
+}
+
+message AddNoteRequest {
+  string email=1; //email of the person to whom the note is intended
+  string content = 2;
+  int64 timestamp = 3; // When it is necessary to do
+}
+
+message AddNoteResponse {
+  int64 note_id = 1;
+}
+
+message GetNotesRequest {
+  string user_id = 1; // ID of the user whose notes are being requested
+  int64 start_timestamp = 2; // Start of the time range
+  int64 end_timestamp = 3; // End of the time range
+}
+
+message GetNotesResponse {
+  repeated NoteModel notes = 1;
+}
+
+message NoteModel {
+  int64 note_id = 1;
+  string from_email = 2;
+  string content = 3;
+  int64 timestamp = 4;
+}
+
+message DeleteNoteRequest {
+  int64 note_id = 1;
+}
+
+message DeleteNoteResponse {
+  bool success = 1;
+}
