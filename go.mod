@@ -1,4 +1,4 @@
-module protofun
+module github.com/hzcho/protofun
 
 go 1.22.5
 
