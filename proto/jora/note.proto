@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "hzcho.note.v1;notev1";
+option go_package = "hzcho.protofun.v1;notev1";
 
 service Note {
   rpc AddNote (AddNoteRequest) returns (AddNoteResponse);
