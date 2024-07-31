@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: jora/auth.proto
 
-package authv1
+package jorav1
 
 import (
 	context "context"
