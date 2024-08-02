@@ -20,8 +20,8 @@ message AddNoteResponse {
 
 message GetNotesRequest {
   string user_id = 1; // ID of the user whose notes are being requested
-  int64 start_timestamp = 2; // Start of the time range
-  int64 end_timestamp = 3; // End of the time range
+  int64 start_run_time = 2; // start of the execution time range
+  int64 end_run_time = 3; // end of the execution time range
 }
 
 message GetNotesResponse {
@@ -32,7 +32,8 @@ message NoteModel {
   int64 note_id = 1;
   string from_email = 2;
   string content = 3;
-  int64 timestamp = 4;
+  int64 send_time = 4;
+  int64 run_time=5;
 }
 
 message DeleteNoteRequest {
