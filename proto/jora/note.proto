@@ -19,7 +19,7 @@ message AddNoteResponse {
 }
 
 message GetNotesRequest {
-  string user_id = 1; // ID of the user whose notes are being requested
+  int64 user_id = 1; // ID of the user whose notes are being requested
   int64 start_run_time = 2; // start of the execution time range
   int64 end_run_time = 3; // end of the execution time range
 }
