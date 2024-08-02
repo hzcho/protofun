@@ -31,9 +31,10 @@ message GetNotesResponse {
 message NoteModel {
   int64 note_id = 1;
   string from_email = 2;
-  string content = 3;
-  int64 send_time = 4;
-  int64 run_time=5;
+  string to_email=3;
+  string content = 4;
+  int64 send_time = 5;
+  int64 run_time=6;
 }
 
 message DeleteNoteRequest {
