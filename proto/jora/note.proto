@@ -9,9 +9,9 @@ service Note {
 }
 
 message AddNoteRequest {
-  string email=1; //email of the person to whom the note is intended
+  string to_email=1; //email of the person to whom the note is intended
   string content = 2;
-  int64 timestamp = 3; // When it is necessary to do
+  int64 run_time = 3; // When it is necessary to do
 }
 
 message AddNoteResponse {
